@@ -57,7 +57,8 @@
 					tooltip:
 						'Among other technologies, these are the ones I used the most. I’m someone who always enjoys learning and improving.'
 				}
-			]
+			],
+			borderColor: 'border-[#2081C3]'
 		},
 		{
 			orientation: 'right',
@@ -150,7 +151,8 @@
 					tooltip:
 						'Among other technologies, these are the ones I used the most. I’m someone who always enjoys learning and improving.'
 				}
-			]
+			],
+			borderColor: 'border-[#192d4d]'
 		}
 	];
 </script>
