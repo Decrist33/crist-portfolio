@@ -10,9 +10,9 @@
 			title: 'Software Engineer in WERA Agentes Aduanales (Customs Agency)',
 			subtitle: 'Ago 2024 - Nov 2025',
 			content: [
-				`Indentified improvement opportunities in the business, carrying out project's design, development and implementation always taking in count security and performance.`,
-				`Design systems & Create new business solutions for external and internal use.`,
-				`Maintain legacy code to improve functionality & performance.`
+				'Identified business improvement opportunities; designed, developed, and implemented projects while prioritizing security and performance.',
+				'Designed systems and created new business solutions for both internal and external use.',
+				'Maintained legacy code to enhance functionality and optimize performance.'
 			],
 			image: '/experience/programming.png',
 			technologies: [
@@ -50,9 +50,12 @@
 					name: 'Tailwind CSS'
 				},
 				{
+					name: 'Git'
+				},
+				{
 					name: '+',
 					tooltip:
-						"Among other technologies, these are the ones I used the most. I'm someone who always enjoys to learn and improve."
+						'Among other technologies, these are the ones I used the most. I’m someone who always enjoys learning and improving.'
 				}
 			]
 		},
@@ -61,9 +64,8 @@
 			title: 'Software Engineer at Transportadora Norte de Chihuahua (TNCH)',
 			subtitle: 'Jul 2022 - Ago 2024',
 			content: [
-				`Maintained and developed new software solutions for existing problematics in the company, applying requirements engineering to 
-								design, develop and deliver efficient and useful systems for users.`,
-				`Improved aesthetic of old landing page to have a more atractive design.`
+				'Maintained and developed new software solutions for existing business challenges, applying requirements engineering to design, develop, and deliver efficient systems.',
+				'Improved the aesthetics of legacy landing page to create a more modern and attractive design.'
 			],
 			image: '/experience/transportadora.png',
 			technologies: [
@@ -95,9 +97,12 @@
 					name: 'AWS'
 				},
 				{
+					name: 'Git'
+				},
+				{
 					name: '+',
 					tooltip:
-						"Among other technologies, these are the ones I used the most. I'm someone who always enjoys to learn and improve."
+						'Among other technologies, these are the ones I used the most. I’m someone who always enjoys learning and improving.'
 				}
 			]
 		},
@@ -106,8 +111,8 @@
 			title: 'Freelance Software Developer',
 			subtitle: 'Jan 2020 - Present',
 			content: [
-				`Create software solutions for private businesses and clients based on their requirements utilizing backend and frontend technologies.`,
-				`Support PhD candidate with software development and data science utilizing technologies like Unity, Kinect to track body's movement, and Python.`
+				'Create custom software solutions for private businesses and clients using full-stack technologies to meet specific technical requirements.',
+				'Supported a PhD candidate in software development and data science, utilizing Unity and Kinect for biometric body tracking and Python for data analysis.'
 			],
 			technologies: [
 				{
@@ -138,9 +143,12 @@
 					name: 'React'
 				},
 				{
+					name: 'Git'
+				},
+				{
 					name: '+',
 					tooltip:
-						"Among other technologies, these are the ones I used the most. I'm someone who always enjoys to learn and improve."
+						'Among other technologies, these are the ones I used the most. I’m someone who always enjoys learning and improving.'
 				}
 			]
 		}
@@ -171,11 +179,11 @@
 		</div>
 
 		<p class="text-md sm:text-lg md:text-xl grow">
-			I'm a software solutions creator with proficiency in technologies such as Python, FastAPI,
-			JavaScript, TypeScript, React, C#, .NET, Java, SQL, HTML, CSS, Flutter and GIT. Even though
-			those are the technologies I've used the most, I always enjoy learning new technologies and
-			improving my proficiency in the ones I already know, to deliver an excellent, efficient and
-			reliable solution.
+			I’m a software solutions creator with proficiency in technologies such as Python, FastAPI,
+			JavaScript, TypeScript, React, C#, .NET, Java, SQL, HTML, CSS, Flutter, and Git. Although
+			these are the technologies I’ve used the most, I always enjoy learning new ones and improving
+			my proficiency in those I already know, in order to deliver excellent, efficient, and reliable
+			solutions.
 		</p>
 		<a href="#experience" class="flex justify-center items-center hover:cursor-pointer">
 			<ChevronDown class="animate-float" />
