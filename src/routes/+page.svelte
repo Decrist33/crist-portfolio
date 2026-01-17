@@ -177,7 +177,7 @@
 	>
 		<div class="w-full">
 			<h1 class="text-2xl sm:text-4xl text-primary mb-1">Cristobal Elizalde</h1>
-			<h2 class="text-sm sm:text-md pl-0.5 mb-6">Software Engineer</h2>
+			<h2 class="text-sm sm:text-md md:text-lg pl-0.5 mb-6">Software Engineer</h2>
 		</div>
 
 		<p class="text-md sm:text-lg md:text-xl grow">
