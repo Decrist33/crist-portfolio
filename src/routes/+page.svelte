@@ -3,7 +3,6 @@
 
 	import ExperienceTimeline from '$lib/components/ExperienceTimeLine.svelte';
 	import type { Experience } from '$lib/types';
-	import ExperienceCard from '$lib/components/ExperienceCard.svelte';
 
 	const experiences: Experience[] = [
 		{

@@ -5,10 +5,9 @@
 
 	interface Props {
 		experience: Experience;
-		index: number;
 	}
 
-	let { experience, index }: Props = $props();
+	let { experience }: Props = $props();
 	let cardElement: HTMLDivElement;
 	let isVisible = $state(false);
 
