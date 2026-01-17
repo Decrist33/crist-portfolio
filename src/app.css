@@ -1,1 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--color-primary: #fbfffe;
+	--color-secondary: #2e466c;
+	--color-tertiary: #c1292e;
+	--color-muted: #242424;
+	--color-page-bg: #0d130e;
+
+	--font-firacode: 'Fira Code', sans-serif;
+
+	--animate-float: float 3.5s ease-in-out infinite;
+
+	@keyframes float {
+		0%,
+		100% {
+			transform: translateY(0);
+			opacity: 0.6;
+		}
+		50% {
+			transform: translateY(10px);
+			opacity: 1;
+		}
+	}
+}
+
+body {
+	font-family: var(--font-firacode);
+	background-color: var(--color-page-bg);
+	color: var(--color-primary);
+	transition: background-color 0.3s ease;
+}

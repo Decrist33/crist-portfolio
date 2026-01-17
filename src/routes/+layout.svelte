@@ -1,14 +1,8 @@
 <script lang="ts">
-	import favicon from '$lib/assets/favicon.svg';
 	import '../app.css';
-	export const ssr = false;
-	export const prerender = true;
-
 	let { children } = $props();
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
-
-{@render children()}
+<div class="h-screen w-screen relative overflow-y-auto scroll-smooth">
+	{@render children()}
+</div>
