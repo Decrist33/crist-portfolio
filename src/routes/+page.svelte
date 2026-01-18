@@ -8,7 +8,7 @@
 		{
 			orientation: 'left',
 			title: 'Software Engineer in WERA Agentes Aduanales (Customs Agency)',
-			subtitle: 'Ago 2024 - Nov 2025',
+			subtitle: 'Aug 2024 - Nov 2025',
 			content: [
 				'Identified business improvement opportunities; designed, developed, and implemented projects while prioritizing security and performance.',
 				'Designed systems and created new business solutions for both internal and external use.',
@@ -63,7 +63,7 @@
 		{
 			orientation: 'right',
 			title: 'Software Engineer at Transportadora Norte de Chihuahua (TNCH)',
-			subtitle: 'Jul 2022 - Ago 2024',
+			subtitle: 'Jul 2022 - Aug 2024',
 			content: [
 				'Maintained and developed new software solutions for existing business challenges, applying requirements engineering to design, develop, and deliver efficient systems.',
 				'Improved the aesthetics of legacy landing page to create a more modern and attractive design.'
