@@ -1,38 +1,40 @@
-# sv
+# Personal Portfolio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-## Creating a project
+This repository contains my personal web portfolio, showcasing my experience as a software developer.
 
-If you're seeing this, you've probably already done this step. Congrats!
+The portfolio was fully designed and developed by me, with a focus on a clean and minimal UI for clarity.  
+Some images used in the project were sourced from https://pixabay.com/.
 
-```sh
-# create a new project in the current directory
-npx sv create
+🌐 **Live site:** https://crist-portfolio.vercel.app/
 
-# create a new project in my-app
-npx sv create my-app
+## 📸 Screenshots
+
+<img src="images/screenshot_1.png" width="1000" />
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/Decrist33/crist-portfolio.git
 ```
 
-## Developing
+Go to the project directory
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```bash
+  cd crist-portfolio
 ```
 
-## Building
+Install dependencies
 
-To create a production version of your app:
-
-```sh
-npm run build
+```bash
+  pnpm install
 ```
 
-You can preview the production build with `npm run preview`.
+Start the server
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+  pnpm run dev
+```
