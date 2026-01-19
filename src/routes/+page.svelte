@@ -110,7 +110,7 @@
 		{
 			orientation: 'left',
 			title: 'Freelance Software Developer',
-			subtitle: 'Jan 2020 - Present',
+			subtitle: 'Jan 2020 - Jun 2022',
 			content: [
 				'Create custom software solutions for private businesses and clients using full-stack technologies to meet specific technical requirements.',
 				'Supported a PhD candidate in software development and data science, utilizing Unity and Kinect for biometric body tracking and Python for data analysis.'
@@ -129,7 +129,13 @@
 					name: 'SQL'
 				},
 				{
+					name: 'PHP'
+				},
+				{
 					name: 'JavaScript'
+				},
+				{
+					name: 'TypeScript'
 				},
 				{
 					name: 'HTML'
@@ -142,6 +148,9 @@
 				},
 				{
 					name: 'React'
+				},
+				{
+					name: 'Vue'
 				},
 				{
 					name: 'Git'
@@ -182,7 +191,7 @@
 
 		<p class="text-md sm:text-lg md:text-xl grow">
 			I’m a software solutions creator with proficiency in technologies such as Python, FastAPI,
-			JavaScript, TypeScript, React, C#, .NET, Java, SQL, HTML, CSS, Flutter, and Git. Although
+			JavaScript, TypeScript, React, C#, .NET, Java, PHP, SQL, HTML, CSS, Flutter, and Git. Although
 			these are the technologies I’ve used the most, I always enjoy learning new ones and improving
 			my proficiency in those I already know, in order to deliver excellent, efficient, and reliable
 			solutions.
