@@ -10,8 +10,8 @@
 	let { experiences }: Props = $props();
 </script>
 
-<div class="w-full max-w-7xl mx-auto px-4 py-4 lg:py-12">
-	<div class="space-y-0">
+<div class="w-full max-w-7xl mx-auto py-4 lg:py-12">
+	<div class="space-y-0 flex flex-col justify-start items-center">
 		{#each experiences as experience, i}
 			<ExperienceCard {experience} />
 

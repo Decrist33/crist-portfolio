@@ -20,3 +20,8 @@ export interface Experience {
 	bgColor?: string;
 	borderColor?: string;
 }
+
+export interface SkillsProps {
+	title: string;
+	skills: Technology[];
+}
