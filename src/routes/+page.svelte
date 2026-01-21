@@ -30,23 +30,33 @@
 
 	<!-- Content -->
 	<div
-		class="flex flex-col justify-center items-center relative z-10 h-4/5 sm:h-130 w-4/5
-	   max-h-500 max-w-5xl border border-solid border-white px-6 sm:px-12 pt-6 sm:pt-12 pb-4 rounded-md
-		bg-black/30 overflow-y-auto transition-all ease-out"
+		class="flex flex-col relative z-10
+         w-11/12 max-w-5xl
+         h-fit max-h-[90dvh]
+         border border-solid border-white
+         px-6 py-6 sm:px-12 sm:pt-12 sm:pb-4
+         rounded-md bg-black/30
+         overflow-y-auto transition-all ease-out"
 	>
-		<div class="w-full">
+		<div class="w-full shrink-0">
 			<h1 class="text-2xl sm:text-4xl text-primary mb-1">Cristobal Elizalde</h1>
-			<h2 class="text-sm sm:text-md md:text-lg pl-0.5 mb-6">Software Developer Engineer</h2>
+			<h2 class="text-sm sm:text-md md:text-lg pl-0.5 mb-4 sm:mb-6">Software Developer Engineer</h2>
 		</div>
 
-		<p class="text-md sm:text-lg md:text-xl grow">
-			I’m a software solutions creator with over 3 years of experience developing software. My goal
-			is to deliver efficient, well-designed, and reliable solutions on time. As an engineer, I do
-			more than just write code, I track requirements, design systems, make technical decisions,
-			suggest improvements, troubleshoot issues, identify opportunities, and evaluate new
-			technologies when appropriate.
-		</p>
-		<a href="#experience" class="flex justify-center items-center hover:cursor-pointer">
+		<div class="overflow-y-auto pr-2 custom-scrollbar">
+			<p class="text-md sm:text-lg md:text-xl">
+				I’m a software solutions creator with over 3 years of experience developing software. My
+				goal is to deliver efficient, well-designed, and reliable solutions on time. As an engineer,
+				I do more than just write code, I track requirements, design systems, make technical
+				decisions, suggest improvements, troubleshoot issues, identify opportunities, and evaluate
+				new technologies when appropriate.
+			</p>
+		</div>
+
+		<a
+			href="#experience"
+			class="mt-4 flex justify-center items-center shrink-0 hover:cursor-pointer"
+		>
 			<ChevronDown class="animate-float" />
 		</a>
 	</div>
