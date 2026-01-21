@@ -46,7 +46,7 @@
 	<h3 class="text-2xl sm:text-3xl md:text-4xl mb-2 lg:mb-4">Technologies</h3>
 	<div
 		class=" flex flex-col justify-start items-start border border-solid border-primary
-			w-full max-w-5xl p-4 sm:p-6 rounded-md backdrop-blur-md bg-black/30"
+			w-full max-w-5xl p-4 sm:p-6 rounded-md backdrop-blur-xs bg-black/20"
 	>
 		{#each skillsArray as skill}
 			<ItemList title={skill.title} items={skill.skills} />

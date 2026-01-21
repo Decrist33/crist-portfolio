@@ -40,10 +40,10 @@
 
 <div
 	bind:this={cardElement}
-	class=" max-w-6xl rounded-md overflow-auto backdrop-blur-md border-2 transition-all duration-300 hover:border-primary {isVisible
+	class=" max-w-6xl rounded-md overflow-auto backdrop-blur-xs border-2 transition-all duration-300 hover:border-primary {isVisible
 		? 'opacity-100 translate-y-0'
-		: 'opacity-0 translate-y-8'} {experience.borderColor || 'border-secondary'}"
-	style="background: {experience.bgColor || 'rgba(0, 0, 0, 0.1)'};"
+		: 'opacity-0 translate-y-8'} {experience.borderColor || 'border-secondary'}
+		bg-black/20"
 >
 	<div class="p-4 sm:p-6">
 		<!-- Title and Subtitle -->

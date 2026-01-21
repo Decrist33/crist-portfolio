@@ -5,6 +5,7 @@
 	import type { SkillsProps } from '$lib/types';
 	import TechSection from '$lib/components/TechSection.svelte';
 	import { backend, experiences, frontend, interested, languages, other } from '$lib/tech-stack';
+	import FloatingPolygons from '$lib/components/FloatingPolygons.svelte';
 
 	const skillsArray: SkillsProps[] = [
 		{ title: 'Languages', skills: languages },
@@ -51,25 +52,28 @@
 	</div>
 </section>
 
-<section id="experience">
-	<div class="min-h-screen">
-		<div class="container mx-auto px-4 py-8 lg:py-16">
-			<h1 class="text-2xl sm:text-3xl md:text-4xl text-white text-center mb-2 lg:mb-4">
-				Experience
-			</h1>
+<div class="relative">
+	<FloatingPolygons count={5} minSize={30} maxSize={70} />
+	<section id="experience">
+		<div class="min-h-screen pt-8">
+			<div class="container mx-auto px-4 py-8 lg:py-16">
+				<h1 class="text-2xl sm:text-3xl md:text-4xl text-white text-center mb-2 lg:mb-4">
+					Experience
+				</h1>
 
-			<p class="text-sm md:text-md text-gray-400 text-center mb-2 max-w-2xl mx-auto">
-				A timeline of my career journey and the technologies I've worked with
-			</p>
+				<p class="text-sm md:text-md text-gray-400 text-center mb-2 max-w-2xl mx-auto">
+					A timeline of my career journey and the technologies I've worked with
+				</p>
 
-			<ExperienceTimeline {experiences} />
+				<ExperienceTimeline {experiences} />
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section id="technologies" class="px-4">
-	<TechSection {skillsArray} />
-</section>
+	<section id="technologies" class="px-4">
+		<TechSection {skillsArray} />
+	</section>
+</div>
 
 <style lang="postcss">
 	@reference "tailwindcss";
