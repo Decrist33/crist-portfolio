@@ -3,6 +3,6 @@
 	let { children } = $props();
 </script>
 
-<div class="h-screen w-screen relative overflow-y-auto scroll-smooth">
+<div class="h-dvh pb-[env(safe-area-inset-bottom)] w-screen relative overflow-y-auto scroll-smooth">
 	{@render children()}
 </div>
