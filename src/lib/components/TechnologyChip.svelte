@@ -5,7 +5,7 @@
 
 	interface Props {
 		technology: Technology;
-		soundEnabled: boolean;
+		soundEnabled?: boolean;
 	}
 
 	let { technology, soundEnabled = true }: Props = $props();
