@@ -3,7 +3,7 @@ import type { Experience } from './types';
 export const experiences: Experience[] = [
 	{
 		orientation: 'left',
-		title: 'Software Engineer in WERA Agentes Aduanales (Customs Agency)',
+		title: 'Software Engineer at WERA Agentes Aduanales (Customs Brokerage)',
 		subtitle: 'Aug 2024 - Nov 2025',
 		content: [
 			'Identified business improvement opportunities; designed, developed, and implemented projects while prioritizing security and performance.',
