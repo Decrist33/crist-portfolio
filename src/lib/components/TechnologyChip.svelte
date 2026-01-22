@@ -1,16 +1,20 @@
 <script lang="ts">
+	import { hoverSound } from '$lib/actions/hoverSound';
 	import type { Technology } from '$lib/types';
 	import { computePosition, flip, shift, offset, arrow } from '@floating-ui/dom';
 
 	interface Props {
 		technology: Technology;
+		soundEnabled: boolean;
 	}
 
-	let { technology }: Props = $props();
+	let { technology, soundEnabled = true }: Props = $props();
 	let showTooltip = $state(false);
 	let buttonEl: HTMLElement | undefined = $state();
 	let tooltipEl: HTMLElement | undefined = $state();
 	let arrowEl: HTMLElement | undefined = $state();
+
+	let soundUrl = '/sounds/pop.mp3';
 
 	async function updateTooltipPosition() {
 		if (!buttonEl || !tooltipEl || !arrowEl) return;
@@ -57,6 +61,7 @@
 <div class="relative inline-block">
 	<button
 		bind:this={buttonEl}
+		use:hoverSound={{ src: soundUrl, enabled: soundEnabled, volume: 0.3 }}
 		class="h-7 px-3 rounded-md text-xs transition-all duration-200
 		flex items-center justify-center gap-1.5 hover:scale-105 {technology.bgColor ||
 			'bg-secondary'} {technology.textColor || 'text-primary'}"

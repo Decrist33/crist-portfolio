@@ -6,6 +6,7 @@
 	import TechSection from '$lib/components/TechSection.svelte';
 	import { backend, experiences, frontend, interested, languages, other } from '$lib/tech-stack';
 	import FloatingPolygons from '$lib/components/FloatingPolygons.svelte';
+	import { vibrate } from '$lib/actions/vibrate';
 
 	const skillsArray: SkillsProps[] = [
 		{ title: 'Languages', skills: languages },
@@ -54,6 +55,7 @@
 		</div>
 
 		<a
+			use:vibrate
 			href="#experience"
 			class="mt-4 flex justify-center items-center shrink-0 hover:cursor-pointer"
 		>
