@@ -48,7 +48,7 @@
 	<div class="p-4 sm:p-6">
 		<!-- Title and Subtitle -->
 		<div class="w-full mb-6 {isLeft ? 'text-left' : 'text-right'}">
-			<h3 class="text-md sm:text-2xl font-bold text-white">{experience.title}</h3>
+			<h3 class="text-md sm:text-2xl font-bold text-white cursor-default">{experience.title}</h3>
 			<div class="text-xs sm:text-sm text-gray-400 mb-1">{experience.subtitle}</div>
 		</div>
 

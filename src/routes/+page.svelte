@@ -7,6 +7,7 @@
 	import { backend, experiences, frontend, interested, languages, other } from '$lib/tech-stack';
 	import FloatingPolygons from '$lib/components/FloatingPolygons.svelte';
 	import { vibrate } from '$lib/actions/vibrate';
+	import HobbieSection from '$lib/components/HobbieSection.svelte';
 
 	const skillsArray: SkillsProps[] = [
 		{ title: 'Languages', skills: languages },
@@ -34,13 +35,13 @@
 		class="flex flex-col relative z-10
          w-11/12 max-w-5xl
          h-fit max-h-[90dvh]
-         border border-solid border-white
+         border-2 border-solid border-white
          px-6 py-6 sm:px-12 sm:pt-12 sm:pb-4
          rounded-md bg-black/30
          overflow-y-auto transition-all ease-out"
 	>
 		<div class="w-full shrink-0">
-			<h1 class="text-2xl sm:text-4xl text-primary mb-1">Cristobal Elizalde</h1>
+			<h1 class="text-2xl sm:text-4xl text-primary mb-1 cursor-default">Cristobal Elizalde</h1>
 			<h2 class="text-sm sm:text-md md:text-lg pl-0.5 mb-4 sm:mb-6">Software Developer Engineer</h2>
 		</div>
 
@@ -69,7 +70,9 @@
 	<section id="experience">
 		<div class="min-h-screen pt-8">
 			<div class="container mx-auto px-4 py-8 lg:py-16">
-				<h1 class="text-2xl sm:text-3xl md:text-4xl text-white text-center mb-2 lg:mb-4">
+				<h1
+					class="text-2xl sm:text-3xl md:text-4xl text-white text-center mb-2 lg:mb-4 cursor-default"
+				>
 					Experience
 				</h1>
 
@@ -84,6 +87,10 @@
 
 	<section id="technologies" class="px-4">
 		<TechSection {skillsArray} />
+	</section>
+
+	<section id="hobbies">
+		<HobbieSection />
 	</section>
 </div>
 

@@ -43,9 +43,9 @@
 		? 'opacity-100 translate-y-0'
 		: 'opacity-0 translate-y-8'}"
 >
-	<h3 class="text-2xl sm:text-3xl md:text-4xl mb-2 lg:mb-4">Technologies</h3>
+	<h3 class="text-2xl sm:text-3xl md:text-4xl mb-2 lg:mb-4 cursor-default">Technologies</h3>
 	<div
-		class=" flex flex-col justify-start items-start border border-solid border-primary
+		class=" flex flex-col justify-start items-start border-2 border-solid border-primary
 			w-full max-w-5xl p-4 sm:p-6 rounded-md backdrop-blur-xs bg-black/20"
 	>
 		{#each skillsArray as skill}
