@@ -14,7 +14,7 @@
 	}
 
 	// --- Props ---
-	export let count = 15; // Number of active polygons
+	export let count = 15;
 	export let minSize = 20;
 	export let maxSize = 60;
 
@@ -22,7 +22,7 @@
 	let ctx: CanvasRenderingContext2D;
 	let frame: number;
 	let polygons: Polygon[] = [];
-	let isVisible = false;
+	let globalEntranceAlpha = 0;
 	let width = 0;
 	let height = 0;
 
@@ -36,10 +36,10 @@
 
 	// --- Logic ---
 	const createPolygon = (isInitial = false): Polygon => {
-		const sides = [triangle, square, pentagon, hexagon][Math.floor(Math.random() * 5)];
+		const sides = [triangle, square, pentagon, hexagon][Math.floor(Math.random() * 4)];
 		return {
 			x: Math.random() * width,
-			y: isInitial ? Math.random() * height : height + 100, // Spawn below viewport
+			y: isInitial ? Math.random() * height : height + 100,
 			size: Math.random() * (maxSize - minSize) + minSize,
 			sides: sides,
 			rotation: Math.random() * Math.PI * 2,
@@ -50,24 +50,18 @@
 	};
 
 	const drawRoundedPolygon = (p: Polygon) => {
-		// 1. Calculate Life Ratio (0 at bottom, 1 at top)
 		const dissapearDetonant = 200;
 		const lifeRatio = Math.max(p.y - dissapearDetonant, 0) / height;
 
-		// 2. Calculate Fade Factor
-		// This creates a bell-curve effect for opacity
 		let fade = 1;
-		const margin = 0.2; // 20% of the height for the transition
+		const margin = 0.2;
 
 		if (lifeRatio > 1 - margin) {
-			// Near bottom: Fade In (since they travel from height to 0)
 			fade = (1 - lifeRatio) / margin;
 		} else if (lifeRatio < margin) {
-			// Near top: Fade Out
 			fade = lifeRatio / margin;
 		}
 
-		// Fade stays between 0 and 1
 		const currentOpacity = Math.max(0, Math.min(p.opacity * fade, 1));
 
 		ctx.beginPath();
@@ -83,8 +77,7 @@
 
 		ctx.closePath();
 
-		const originalOpacity = 1;
-		ctx.fillStyle = `rgba(0, 0, 0, ${currentOpacity * originalOpacity})`;
+		ctx.fillStyle = `rgba(0, 0, 0, ${currentOpacity})`;
 		ctx.fill();
 
 		ctx.lineJoin = 'round';
@@ -93,15 +86,11 @@
 		ctx.stroke();
 	};
 
-	let globalEntranceAlpha = 0;
-
 	const animate = () => {
-		if (!isVisible) return;
-		// Gradually increase global visibility when section is entered
 		if (globalEntranceAlpha < 1) globalEntranceAlpha += 0.01;
 
 		ctx.clearRect(0, 0, width, height);
-		ctx.globalAlpha = globalEntranceAlpha; // Controls the whole canvas
+		ctx.globalAlpha = globalEntranceAlpha;
 
 		polygons.forEach((p, i) => {
 			p.y -= p.speed;
@@ -109,7 +98,6 @@
 
 			drawRoundedPolygon(p);
 
-			// If it goes off top, reset to bottom
 			if (p.y < -p.size) {
 				polygons[i] = createPolygon();
 			}
@@ -128,27 +116,19 @@
 			canvas.height = height;
 		};
 
-		// Initialize observer
-		const observer = new IntersectionObserver(
-			(entries) => {
-				isVisible = entries[0].isIntersecting;
-				if (isVisible) animate();
-			},
-			{ threshold: 0.1 }
-		);
-
-		observer.observe(canvas);
 		window.addEventListener('resize', resize);
 		resize();
 
-		// Initial population
 		polygons = Array.from({ length: count }, () => createPolygon(true));
+		animate();
 
 		return () => {
-			observer.disconnect();
 			window.removeEventListener('resize', resize);
-			cancelAnimationFrame(frame);
 		};
+	});
+
+	onDestroy(() => {
+		if (frame) cancelAnimationFrame(frame);
 	});
 </script>
 
