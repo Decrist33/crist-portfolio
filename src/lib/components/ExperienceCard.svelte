@@ -41,8 +41,8 @@
 <div
 	bind:this={cardElement}
 	class=" max-w-6xl rounded-md overflow-auto backdrop-blur-xs border-2 transition-all duration-300 hover:border-primary {isVisible
-		? 'opacity-100 translate-y-0'
-		: 'opacity-0 translate-y-8'} {experience.borderColor || 'border-secondary'}
+		? 'opacity-100 scale-100'
+		: 'opacity-0 scale-75'} {experience.borderColor || 'border-secondary'}
 		bg-black/20"
 >
 	<div class="p-4 sm:p-6">
@@ -82,9 +82,13 @@
 
 			<!-- Image -->
 			{#if experience.image}
-				<div class=" w-full md:w-96 shrink-0">
+				<div class="w-full md:w-96 shrink-0">
 					<div class="rounded-md overflow-hidden bg-gray-800 aspect-video shadow-lg">
-						<img src={experience.image} alt={experience.title} class="w-full h-full object-cover" />
+						<img
+							src={experience.image}
+							alt={experience.title}
+							class="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+						/>
 					</div>
 				</div>
 			{/if}

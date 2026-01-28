@@ -37,16 +37,14 @@
 	});
 </script>
 
-<div
-	bind:this={techDiv}
-	class=" min-h-screen flex flex-col justify-center items-center transition-all duration-300 {isVisible
-		? 'opacity-100 translate-y-0'
-		: 'opacity-0 translate-y-8'}"
->
+<div class=" min-h-screen flex flex-col justify-center items-center">
 	<h3 class="text-2xl sm:text-3xl md:text-4xl mb-2 lg:mb-4 cursor-default">Technologies</h3>
 	<div
-		class=" flex flex-col justify-start items-start border-2 border-solid border-primary
-			w-full max-w-5xl p-4 sm:p-6 rounded-md backdrop-blur-xs bg-black/20"
+		bind:this={techDiv}
+		class=" flex flex-col justify-start items-start border-2 border-solid border-primary transition-all duration-300
+			w-full max-w-5xl p-4 sm:p-6 rounded-md backdrop-blur-xs bg-black/20 {isVisible
+			? 'opacity-100 scale-100'
+			: 'opacity-0 scale-75'}"
 	>
 		{#each skillsArray as skill}
 			<ItemList title={skill.title} items={skill.skills} />
