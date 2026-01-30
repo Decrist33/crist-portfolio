@@ -61,7 +61,7 @@
 <div class="relative inline-block">
 	<button
 		bind:this={buttonEl}
-		use:hoverSound={{ src: soundUrl, enabled: soundEnabled, volume: 0.3 }}
+		use:hoverSound={{ src: soundUrl, enabled: soundEnabled, volume: 0.4 }}
 		class="h-7 px-3 rounded-md text-xs transition-all duration-200
 		flex items-center justify-center gap-1.5 hover:scale-105 {technology.bgColor ||
 			'bg-secondary'} {technology.textColor || 'text-primary'}"
