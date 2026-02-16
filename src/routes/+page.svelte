@@ -20,7 +20,7 @@
 
 <section
 	id="hero"
-	class="relative h-screen w-full overflow-hidden flex items-center justify-center"
+	class="relative h-screen w-full overflow-hidden flex items-center justify-center flex-col"
 >
 	<!-- Background -->
 	<div
@@ -35,9 +35,8 @@
 		class="flex flex-col relative z-10
          w-11/12 max-w-5xl
          h-fit max-h-[90dvh]
-         border-2 border-solid border-white
          px-6 py-6 sm:px-12 sm:pt-12 sm:pb-4
-         rounded-md bg-black/30
+         rounded-md
          overflow-y-auto transition-all ease-out"
 	>
 		<div class="w-full shrink-0">
@@ -54,15 +53,14 @@
 				new technologies when appropriate.
 			</p>
 		</div>
-
-		<a
-			use:vibrate
-			href="#experience"
-			class="mt-4 flex justify-center items-center shrink-0 hover:cursor-pointer"
-		>
-			<ChevronDown class="animate-float" />
-		</a>
 	</div>
+	<a
+		use:vibrate
+		href="#experience"
+		class="absolute bottom-4 mt-4 flex justify-center items-center shrink-0 hover:cursor-pointer"
+	>
+		<ChevronDown class="animate-float" />
+	</a>
 </section>
 
 <div class="relative">
