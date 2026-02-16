@@ -11,7 +11,7 @@
 	<h4 class="text-md mb-1">{title}</h4>
 	<div class="w-full flex flex-wrap gap-2 justify-start">
 		{#each items as item}
-			<TechnologyChip technology={item} />
+			<TechnologyChip technology={item} soundEnabled={false} />
 		{/each}
 	</div>
 </div>

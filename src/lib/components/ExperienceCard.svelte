@@ -40,7 +40,7 @@
 
 <div
 	bind:this={cardElement}
-	class=" max-w-6xl rounded-md overflow-auto backdrop-blur-xs border-2 transition-all duration-300 hover:border-primary {isVisible
+	class=" max-w-6xl rounded-md overflow-auto backdrop-blur-xs border-2 transition-all duration-300 {isVisible
 		? 'opacity-100 scale-100'
 		: 'opacity-0 scale-75'} {experience.borderColor || 'border-secondary'}
 		bg-black/20"
@@ -74,7 +74,7 @@
 				{#if experience.technologies && experience.technologies.length > 0}
 					<div class="flex flex-wrap gap-2 justify-start">
 						{#each experience.technologies as tech}
-							<TechnologyChip technology={tech} />
+							<TechnologyChip technology={tech} soundEnabled={false} />
 						{/each}
 					</div>
 				{/if}
